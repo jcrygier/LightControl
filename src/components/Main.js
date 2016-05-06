@@ -3,7 +3,7 @@ require('styles/App.css');
 require('rc-slider/assets/index.css');
 
 import React from 'react';
-import ColorPicker from 'react-color';
+import { SliderPicker } from 'react-color';
 import { Grid, Row, Col, Input } from 'react-bootstrap';
 import Slider from 'rc-slider';
 
@@ -43,7 +43,7 @@ class AppComponent extends React.Component {
 
           <Col md={2} mdOffset={1}>
             <label className='control-label'>Light Color</label>
-            <ColorPicker type='slider' onChange={(color) => this.sendUpdateRequest('gHue', Math.ceil(color.hsl.h))}/>
+            <SliderPicker type="slider" onChange={(color) => this.sendUpdateRequest('gHue', Math.ceil(color.hsl.h))}/>
           </Col>
 
           <Col md={2} mdOffset={1}>
