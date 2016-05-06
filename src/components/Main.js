@@ -1,10 +1,11 @@
 require('normalize.css');
 require('styles/App.css');
+require('rc-slider/assets/index.css');
 
 import React from 'react';
 import ColorPicker from 'react-color';
 import { Grid, Row, Col, Input } from 'react-bootstrap';
-//import Slider from 'rc-slider';
+import Slider from 'rc-slider';
 
 const patterns = [
   { value: 0, label: 'Rainbow' },
@@ -53,6 +54,7 @@ class AppComponent extends React.Component {
         <Row>
           <Col md={12}>
             <label className='control-label'>Brightness</label>
+            <Slider min={0} max={255} onChange={ (value) => this.sendUpdateRequest('brightness', value) } />
           </Col>
         </Row>
       </Grid>
