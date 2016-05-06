@@ -1,0 +1,7 @@
+{
+  "generator-react-webpack": {
+    "appName": "lightControl",
+    "style": "css",
+    "postcss": false
+  }
+}
